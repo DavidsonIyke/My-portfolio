@@ -78,7 +78,7 @@
           <div class="hero-metrics">
             <div class="metric-card">
               <span>Projects</span>
-              <strong>24+</strong>
+              <strong id="projectCount">0</strong>
             </div>
             <div class="metric-card">
               <span>Experience</span>
@@ -96,34 +96,27 @@
             <div class="panel-header">
               <div>
                 <p class="eyebrow">Performance</p>
-                <h3>Recent Highlights</h3>
+                <h3>Project Overview</h3>
               </div>
-              <span class="pill">Updated today</span>
+              <a href="manage-projects.html" class="btn btn-primary btn-sm">Manage projects</a>
             </div>
 
-            <div class="project-list">
-              <div class="project-item">
-                <div>
-                  <h4>Modern Portfolio Redesign</h4>
-                  <p>Refined visual direction and responsive layout</p>
-                </div>
-                <span class="status done">Completed</span>
+            <div class="summary-strip">
+              <div class="summary-pill">
+                <span>Total</span>
+                <strong id="summaryTotalProjects">0</strong>
               </div>
-              <div class="project-item">
-                <div>
-                  <h4>UI System for Product Launch</h4>
-                  <p>Scalable components and conversion-focused design</p>
-                </div>
-                <span class="status in-progress">In Progress</span>
+              <div class="summary-pill">
+                <span>Completed</span>
+                <strong id="summaryCompletedProjects">0</strong>
               </div>
-              <div class="project-item">
-                <div>
-                  <h4>Brand Refresh for Creative Studio</h4>
-                  <p>Identity, storytelling, and landing page experience</p>
-                </div>
-                <span class="status planned">Planned</span>
+              <div class="summary-pill">
+                <span>In progress</span>
+                <strong id="summaryActiveProjects">0</strong>
               </div>
             </div>
+
+            <div id="dashboardProjectsList" class="project-list"></div>
           </article>
 
           <article class="panel">

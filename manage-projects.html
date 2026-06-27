@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Davidson | Manage Projects</title>
+    <meta name="description" content="Manage portfolio projects from the dashboard" />
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/css/dashboard.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-icon">D</div>
+          <div>
+            <h4>Davidson</h4>
+            <p>Portfolio Dashboard</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="dashboard.html">
+            <i class="bi bi-speedometer2"></i>
+            Overview
+          </a>
+          <a class="active" href="manage-projects.html">
+            <i class="bi bi-window-stack"></i>
+            Manage Projects
+          </a>
+          <a href="services.html">
+            <i class="bi bi-tools"></i>
+            Services
+          </a>
+          <a href="contact.html">
+            <i class="bi bi-envelope"></i>
+            Contact
+          </a>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="label">Project Hub</p>
+          <h5>Organize your work</h5>
+          <p>Add, update, or remove portfolio entries without touching the main site.</p>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Portfolio Dashboard</p>
+            <h1>Manage your projects</h1>
+          </div>
+
+          <div class="topbar-actions">
+            <a href="dashboard.html" class="btn btn-secondary">Back to overview</a>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Editor</p>
+                <h3 id="projectFormTitle">Add a new project</h3>
+              </div>
+              <span class="pill" id="projectCountBadge">0 items</span>
+            </div>
+
+            <form id="projectForm" class="project-form">
+              <input type="hidden" id="projectId" />
+
+              <div class="form-grid">
+                <label>
+                  Project title
+                  <input id="projectTitle" type="text" placeholder="e.g. E-commerce Landing Page" required />
+                </label>
+
+                <label>
+                  Category
+                  <input id="projectCategory" type="text" placeholder="e.g. Web Design" />
+                </label>
+              </div>
+
+              <label>
+                Description
+                <textarea id="projectDescription" placeholder="Describe the project and your contribution"></textarea>
+              </label>
+
+              <div class="form-grid">
+                <label>
+                  Link
+                  <input id="projectLink" type="url" placeholder="https://example.com" />
+                </label>
+
+                <label>
+                  Status
+                  <select id="projectStatus">
+                    <option value="Planned">Planned</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button id="projectSubmitButton" class="btn btn-primary" type="submit">Add project</button>
+                <button id="cancelEditButton" class="btn btn-secondary" type="button">Cancel</button>
+              </div>
+            </form>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Projects</p>
+                <h3>My project list</h3>
+              </div>
+            </div>
+
+            <div id="projectManagerList" class="project-manager-list"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+  </body>
+</html>
